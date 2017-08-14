@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1100.0" style="-fx-background-color: #f3fab6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainWIndowController">
+   <children>
+      <BarChart fx:id="XYProcess" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="500.0" title="Process Execution">
+        <xAxis>
+          <CategoryAxis label="PROCESSES" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="UNITS" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <BarChart fx:id="XYServer" layoutX="550.0" layoutY="14.0" title="Server Utilization">
+        <xAxis>
+          <CategoryAxis label="SERVERS" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="PERCENTAGE" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label fx:id="label" layoutX="422.0" layoutY="430.0" AnchorPane.bottomAnchor="60.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="528.0" layoutY="454.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: #c3c4c4,linear-gradient(#d6d6d6 50%,white 100%),radial-ggradient(center 50%-40%,radius 200%,#e6e6e6 45%,rgba(230,230,230) 50%); -fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.6),3,0,0,1);" text="Close" />
+   </children>
+</AnchorPane>

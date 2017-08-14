@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ResultPageController">
+   <children>
+      <BarChart fx:id="processBarGraph" layoutX="38.0" layoutY="79.0" title="Process Time">
+        <xAxis>
+          <CategoryAxis fx:id="processes" label="Processes" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="time" label="Time" side="LEFT" tickLabelFill="#dd0c0c" />
+        </yAxis>
+      </BarChart>
+      <PieChart fx:id="serverPieChart" layoutX="557.0" layoutY="79.0" title="Server Utilization" />
+      <Label fx:id="caption" layoutX="725.0" layoutY="528.0" prefHeight="21.0" prefWidth="294.0" />
+      <HBox layoutX="908.0" layoutY="718.0" spacing="20.0" AnchorPane.bottomAnchor="20.0">
+         <children>
+            <Button layoutX="920.0" layoutY="719.0" mnemonicParsing="false" onAction="#printResults" prefHeight="31.0" prefWidth="75.0" text="Save" />
+            <Button layoutX="985.0" layoutY="719.0" mnemonicParsing="false" onAction="#Close" prefWidth="75.0" text="Close" />
+         </children>
+      </HBox>
+      <HBox layoutX="116.0" layoutY="472.0" prefHeight="38.0" prefWidth="337.0">
+         <children>
+            <Label layoutX="116.0" layoutY="506.0" prefHeight="35.0" prefWidth="185.0" text="TOTAL COST:">
+               <font>
+                  <Font name="Tahoma" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="costLabel" prefHeight="22.0" prefWidth="152.0" text="0.0">
+               <font>
+                  <Font name="Times New Roman" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ToolBar layoutX="103.5" layoutY="548.5">
+         <items>
+            <GridPane fx:id="gridPane" gridLinesVisible="true" layoutX="104.0" layoutY="549.0" prefHeight="52.0" prefWidth="469.0" style="-fx-alignment: center;" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="527.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="263.0" minWidth="10.0" prefWidth="166.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="418.0" minWidth="10.0" prefWidth="371.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="30.0" prefWidth="141.0" text="      Processes">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="60.0" prefWidth="337.0" text="                       Server Used" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </items>
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+      </ToolBar>
+      <Label fx:id="heading" layoutX="301.0" layoutY="14.0" prefHeight="45.0" prefWidth="500.0">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

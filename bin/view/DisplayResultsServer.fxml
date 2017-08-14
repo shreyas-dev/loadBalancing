@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ResultController">
+   <children>
+      <PieChart layoutX="20.0" layoutY="7.0" title="Server Utilization" />
+      <Button layoutX="406.0" layoutY="407.0" mnemonicParsing="false" onAction="#goPrev" prefHeight="31.0" prefWidth="75.0" text="Prev" AnchorPane.leftAnchor="385.0" AnchorPane.rightAnchor="390.0" />
+      <Button layoutX="475.0" layoutY="407.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="75.0" text="Close" AnchorPane.leftAnchor="480.0" />
+   </children>
+</AnchorPane>

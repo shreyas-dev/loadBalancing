@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="410.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddProcessController">
+   <children>
+      <Region layoutX="46.0" layoutY="42.0" prefHeight="349.0" prefWidth="529.0" style="-fx-background-color: #b2ff59;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="40.0">
+         <effect>
+            <Blend mode="RED" />
+         </effect>
+      </Region>
+      <Label layoutX="161.0" layoutY="14.0" prefHeight="25.0" prefWidth="149.0" text="Add a new Process" AnchorPane.bottomAnchor="339.0" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="46.0">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font>
+      </Label>
+      <HBox layoutX="150.0" layoutY="322.0" prefHeight="31.0" prefWidth="285.0" spacing="30.0" AnchorPane.bottomAnchor="57.0">
+         <children>
+            <Button layoutX="136.0" layoutY="150.0" mnemonicParsing="false" onAction="#cancel" prefWidth="75.0" text="Cancel" />
+            <Button layoutX="188.0" layoutY="150.0" mnemonicParsing="false" onAction="#add" prefWidth="75.0" text="Add" />
+            <Button mnemonicParsing="false" onAction="#resetAction" prefWidth="75.0" text="Reset" />
+         </children>
+      </HBox>
+      <Label fx:id="label" layoutX="140.0" layoutY="265.0" prefHeight="31.0" prefWidth="333.0" textAlignment="JUSTIFY" textFill="RED" AnchorPane.bottomAnchor="114.0" AnchorPane.leftAnchor="140.0">
+         <font>
+            <Font name="Times New Roman Bold" size="12.0" />
+         </font>
+      </Label>
+      <GridPane alignment="CENTER" layoutX="101.0" layoutY="135.0" prefHeight="82.0" prefWidth="384.0" vgap="50.0" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="127.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label text="Location">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Size(in MB)" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="No. of Requests " GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="processLocation" prefHeight="31.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <effect>
+                  <Blend mode="SCREEN" />
+               </effect>
+            </ChoiceBox>
+            <TextField fx:id="processRequest" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="processSize" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

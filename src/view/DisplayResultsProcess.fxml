@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ResultController">
+   <children>
+      <BarChart fx:id="TimeGraph" layoutX="7.0" title="PROCESS TIME">
+        <xAxis>
+          <CategoryAxis fx:id="processNo" label="PROCESSES" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="timeTaken" label="TIME TAKEN" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <BarChart fx:id="CostGraph" layoutX="480.0" title="PROCESS COST">
+        <xAxis>
+          <CategoryAxis fx:id="processNo" label="PROCESSES" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="costOfProcess" label="COST " side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Button layoutX="438.0" layoutY="401.0" mnemonicParsing="false" onAction="#nextPage" prefHeight="31.0" prefWidth="75.0" text="NEXT" />
+      <Button layoutX="519.0" layoutY="401.0" mnemonicParsing="false" onAction="#closeResult" prefHeight="31.0" prefWidth="75.0" text="CLOSE" />
+   </children>
+</AnchorPane>
